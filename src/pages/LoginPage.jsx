@@ -8,6 +8,7 @@ import {
   Card,
   Alert,
   Spinner,
+  Nav,
 } from "react-bootstrap";
 import { FaUser, FaLock } from "react-icons/fa";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -133,10 +134,24 @@ export default function LoginPage({
               <div className="text-center mt-3">
                 <Form.Text>
                   Don't have an account yet?
-                  <a href="/register">Register Now</a>
+                  <Button
+                    variant="outlined"
+                    onClick={() => {
+                      navigate("/register");
+                    }}
+                  >
+                    Register Now
+                  </Button>
                 </Form.Text>
                 <Form.Text className="d-block mt-2">
-                  <a href="/updatePwd">forgot password</a>
+                  <Button
+                    variant="outlined"
+                    onClick={() => {
+                      navigate("/updatePwd");
+                    }}
+                  >
+                    forgot password
+                  </Button>
                 </Form.Text>
               </div>
             </Card.Body>
